@@ -23,7 +23,7 @@ const tourStops = [
     [{ lat: 46.5962617927362, lng: -80.7647000719165}, "Cryderman Exploration Site"],
     [{ lat: 46.443092699827, lng: -81.0650812187725}, "Kelly Lake Exploration Site"],
     [{ lat: 46.7192258247701, lng: -80.8688974700891}, "Ella Lake Exploration Site"],
-    [{ lat: 46.7619723227006, lng: -80.9044106173248}, "Norman Exploration Site"],
+    [{ lat: 46.7619723227006, lng: -80.9044106173248} "Norman Exploration Site"],
 ];
 
  // Create an info window to share between markers.
