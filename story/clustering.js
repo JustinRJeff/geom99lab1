@@ -32,7 +32,7 @@ function initMap() {
     [{ lat: 46.4735136560283, lng: -81.1867617306821}, "Creighton Mine"],
     [{ lat: 46.3821205002318, lng: -81.4527448018489}, "Totten Mine"],
     [{ lat: 51.0762483894661, lng: -93.8085017734285}, "Cochenour Mine"],
-    [{ lat: 62.8856500438307, lng: -139.337435762411}, "Coffee Gold Mine"],
+    [{ lat: 62.8856500438307, lng: -139.337435762411}, "Coffee Gold Mine"], 
     [{ lat: 50.0199933612206, lng: -79.7144959166417}, "Detour Lake Mine"],
     [{ lat: 46.3945137084619, lng: -81.4321515877216}, "AER Kidd Exploration Site"],
     [{ lat: 46.7578299098178, lng: -80.922449545939}, "Glencore Norman Exploration Site"],
