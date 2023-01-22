@@ -1,14 +1,27 @@
-// The following example creates five accessible and
-// focusable markers.
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 3,
     center: { lat: 59.76401, lng: -110.03819 },
   });
-  // Set LatLng and title text for the markers. The first marker (Boynton Pass)
-  // receives the initial focus when tab is pressed. Use arrow keys to
-  // move between markers; press tab again to cycle through the map controls.
-  const tourStops = [
+  // Create an array of alphabetical characters used to label the markers.
+  const labels = "MMMMMMMMMMEEEEEEEEEE";
+  // Add some markers to the map.
+  // Note: The code uses the JavaScript Array.prototype.map() method to
+  // create an array of markers based on a given "locations" array.
+  // The map() method here has nothing to do with the Google Maps API.
+  const markers = locations.map((location, i) => {
+    return new google.maps.Marker({
+      position: location,
+      label: labels[i % labels.length],
+    });
+  });
+  // Add a marker clusterer to manage the markers.
+  new MarkerClusterer(map, markers, {
+    imagePath:
+      "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+  });
+}
+const locations = [ 
     [{ lat: 46.6374682433722, lng: -81.3691923153349}, "Craig Mine"],
     [{ lat: 46.6582162812214, lng: -80.7979719153345}, "Nickel Rim Mine"],
     [{ lat: 46.6768497417647, lng: -81.3391853153339}, "Coleman Mine"],
@@ -29,28 +42,5 @@ function initMap() {
     [{ lat: 46.443092699827, lng: -81.0650812187725}, "Kelly Lake Exploration Site"],
     [{ lat: 46.7192258247701, lng: -80.8688974700891}, "Ella Lake Exploration Site"],
     [{ lat: 46.7619723227006, lng: -80.9044106173248}, "Norman Exploration Site"],
-  ];
-  // Create an info window to share between markers.
-  const infoWindow = new google.maps.InfoWindow();
-
-  // Create the markers.
-  tourStops.forEach(([position, title], i) => {
-    const marker = new google.maps.Marker({
-      position,
-      map,
-      title: `${i + 1}. ${title}`,
-      label: `${i + 1}`,
-      optimized: false,
-    });
-
-    // Add a click listener for each marker, and set up the info window.
-    marker.addListener("click", () => {
-      infoWindow.close();
-      infoWindow.setContent(marker.getTitle());
-      infoWindow.open(marker.getMap(), marker);
-    });
-  });
-}
-
-window.initMap = initMap;
+];
 
