@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mines and Exploration Sites</title>
-
+    <title>Marker Accessibility</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script> 
+
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <script type="module" src="./index.js"></script>
-    <style>
+  <style>
 	#map {
   height: 100%;
 }
@@ -15,14 +14,13 @@
 /* 
  * Optional: Makes the sample page fill the window. 
  */
-html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
     </style>  
-</head>
+  </head>
   <body>
     <div id="map"></div>
 
@@ -33,10 +31,8 @@ body {
       with https://www.npmjs.com/package/@googlemaps/js-api-loader.
       -->
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly"
       defer
     ></script>
-    <script src="clustering.js"></script>
-    <style>
   </body>
 </html>
