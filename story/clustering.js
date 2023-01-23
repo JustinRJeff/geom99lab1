@@ -1,4 +1,4 @@
-// The following example creates five accessible and
+// The following example was used and modified from https://developers.google.com/maps/documentation/javascript/examples/marker-accessibility
 // focusable markers.
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
@@ -6,9 +6,8 @@ function initMap() {
     center: { lat: 59.76401, lng: -110.03819 },
     mapTypeId: "hybrid",
   });
-  // Set LatLng and title text for the markers. The first marker (Boynton Pass)
-  // receives the initial focus when tab is pressed. Use arrow keys to
-  // move between markers; press tab again to cycle through the map controls.
+  // Set LatLng and title text for the markers.
+  // All markers are mines or exploration sites I have worked at
   const tourStops = [
     [{ lat: 46.6374682433722, lng: -81.3691923153349 }, "Glencore - Craig Mine"],
     [{ lat: 46.6582162812214, lng: -80.7979719153345 }, "Glencore - Nickel Rim Mine"],
@@ -35,6 +34,7 @@ function initMap() {
   const infoWindow = new google.maps.InfoWindow();
 
   // Create the markers.
+  // Modified the title so no number is created before the label and modified all labels to be M for Mine Site
   tourStops.forEach(([position, title], i) => {
     const marker = new google.maps.Marker({
       position,
