@@ -4,7 +4,7 @@ function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 4,
     center: { lat: 59.76401, lng: -110.03819 },
-    mapTypeId: "satellite",
+    mapTypeId: "hybrid",
   });
   // Set LatLng and title text for the markers. The first marker (Boynton Pass)
   // receives the initial focus when tab is pressed. Use arrow keys to
