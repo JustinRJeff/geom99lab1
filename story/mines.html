@@ -1,38 +1,35 @@
-<!DOCTYPE html>
 <html>
-    <!--Adapted from https://developers.google.com/maps/documentation/javascript/marker-clustering#maps_marker_clustering-html-->
   <head>
     <title>Mines and Exploration Sites</title>
-    <h1>Mine and Exploration Sites I have worked at across Canada</h1>
+    <h1>Sites I have worked at in the Mining Industry</h1>
       <p1>M = Mine</p1>
       <p2>E = Exploration Site</p2>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>   
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap"
-      defer>
+    <!-- playground-hide -->
+    <script>
+      const process = { env: {} };
+      process.env.GOOGLE_MAPS_API_KEY =
+        "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg";
     </script>
-    <script src="clustering.js"></script>
-    <style>
-        /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-        #map {
-        height: 100%;
-        }
+    <!-- playground-hide-end -->
 
-        /* Optional: Makes the sample page fill the window. */
-        html,
-        body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        }
-        h1 {
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="clustering.js"></script>
+  
+    <style>
+#map {
+  height: 100%;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+h1 {
     margin: 0px;
     display: block;
     font-size: 2.5em;
-    /* margin-block-start: 0.67em; */
-    /* margin-block-end: 0.67em; */
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
@@ -41,17 +38,30 @@
     p1 {
     margin: 0px;
     display: block;
-    background-color: rgb(233,67,53);
+    background-color: red;
 }
     p2 {
     margin: 0px;
     display: block;
-    background-color: rgb(233,67,53);
+    background-color: red;
 }
-    </style>
+   </style>
 
-  </head>
+
+</head>
   <body>
     <div id="map"></div>
-  </body>
+
+    <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises
+      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly"
+      defer
+    ></script>
+ 
+</body>
 </html>
