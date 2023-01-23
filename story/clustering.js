@@ -9,11 +9,11 @@ function initMap() {
   // receives the initial focus when tab is pressed. Use arrow keys to
   // move between markers; press tab again to cycle through the map controls.
   const tourStops = [
-    [{ lat: 46.6374682433722, lng: -81.3691923153349}, "Glencore - Craig Mine"],
-    [{ lat: 34.8559195, lng: -111.7988186 }, "Airport Mesa"],
-    [{ lat: 34.832149, lng: -111.7695277 }, "Chapel of the Holy Cross"],
-    [{ lat: 34.823736, lng: -111.8001857 }, "Red Rock Crossing"],
-    [{ lat: 34.800326, lng: -111.7665047 }, "Bell Rock"],
+    [{ lat: 46.6374682433722, lng: -81.3691923153349 }, "Glencore - Craig Mine"],
+    [{ lat: 46.6582162812214, lng: -80.7979719153345 }, "Glencore - Nickel Rim Mine"],
+    [{ lat: 46.6768497417647, lng: -81.3391853153339 }, "Vale - Coleman Mine"],
+    [{ lat: 46.4917257699956, lng: -81.0684585227373 }, "Vale - Copper Cliff North Mine"],
+    [{ lat: 56.3385976459896, lng: -62.0951844631363 }, "Vale - Voisey's Bay Mine"],
   ];
   // Create an info window to share between markers.
   const infoWindow = new google.maps.InfoWindow();
